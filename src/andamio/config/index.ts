@@ -8,7 +8,6 @@ import contributorReference from "../cardano/plutus/contributorReference.json"
 import contributorMintingReference from "../cardano/plutus/contributorMintingReference.json"
 import contractTokenMintingReference from "../cardano/plutus/contractTokenMintingReference.json"
 import escrowDecider1 from "../cardano/plutus/escrowDecider1.json"
-import escrowDecider2 from "../cardano/plutus/escrowDecider2.json"
 
 // Course Management
 import assignment from "../cardano/plutus/assignment.json"
@@ -22,14 +21,14 @@ import courseManagementTokens from './courseManagementTokens.json'
 import projectManagementTokens from './projectManagementTokens.json'
 
 export const andamioConfig: AndamioConfig<CourseManagementConfig & ProjectManagementConfig> = {
-  title: "Andamio PBL",
+  title: "Gimbalabs Contributor Instance #001",
   baseAddress: "",
   enterpriseAddress: "",
   rewardAddress: "",
   // at the moment, each contract has a different reference UTxO Address - see individual contract configs
   // referenceScriptAddress: '',
   metadataKey: "",
-  network: "0",
+  network: "1",
   config: {
     assignment: assignment,
     courseReference: courseReference,
@@ -45,7 +44,7 @@ export const andamioConfig: AndamioConfig<CourseManagementConfig & ProjectManage
       courseDeciderNFTURL: "https://www.andamio.io/andamio.png",
     },
     contributorReference: contributorReference,
-    escrows: [escrowDecider1, escrowDecider2],
+    escrows: [escrowDecider1],
     treasury: treasury,
     contractTokenMintingReference: contractTokenMintingReference,
     contributorMintingReference: contributorMintingReference,
